@@ -24,7 +24,7 @@
                             <x-input-error class="mt-2" :messages="$errors->get('stok')" />
                         </div>
                         <div class="max-w-xl">
-                            <x-input-label for="categorie" value="Kategori Buku" />
+                            <x-input-label for="categorie" value="Kategori" />
                             <x-select-input id="categorie" name="kategori_id" class="mt-1 block w-full" required>
                                 <option value="">Open this select menu</option>
                                 @foreach($kategoris as $key => $value)
@@ -35,6 +35,12 @@
                                 @endif
                                 @endforeach
                             </x-select-input>
+
+                            <div class="max-w-xl">
+                            <x-text-input id="user_id" type="hidden" name="user_id" class="mt-1 block w-full"
+                                value="{{ Auth::user()->id }}" required />
+                            <x-input-error class="mt-2" :messages="$errors->get('user_id')" />
+                        </div>
                         </div>
                         <x-secondary-button tag="a" href="{{route('barang.index')}}">Cancel</x-secondary-button>
                         <x-primary-button name="save_and_create" value="true">Save & Create Another</x-primary-button>

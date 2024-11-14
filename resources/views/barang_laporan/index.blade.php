@@ -66,7 +66,7 @@
                                     <th>Jumlah Barang</th>
                                     <th>Keterangan</th>
                                     <th>Status</th>
-                                    <th>Pemohon</th>
+                                    <th>Pelapor</th>
                                     <th>Tanggal</th>
                                     <!-- <th>Aksi</th> -->
                                 </tr>

@@ -34,7 +34,8 @@ class LaporanBarangController extends Controller
         $validated = $request->validate([
             'barang_id' => 'required|max:255',
             'jml_barang_keluar' => 'required',
-            'keterangan' => 'required'
+            'keterangan' => 'required',
+            'user_id' => 'required'
         ]);
 
         $id_barang = $validated['barang_id'];

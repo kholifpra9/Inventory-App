@@ -38,6 +38,12 @@
                                 value="{{$lapBarang->keterangan}}" required />
                             <x-input-error class="mt-2" :messages="$errors->get('keterangan')" />
                         </div>
+
+                        <div class="max-w-xl">
+                            <x-text-input id="user_id" type="hidden" name="user_id" class="mt-1 block w-full"
+                                value="{{ Auth::user()->id }}" required />
+                            <x-input-error class="mt-2" :messages="$errors->get('user_id')" />
+                        </div>
                         
                         <div>
                             <x-input-label for="keterangan" value="Barang akan Ditambahkan sesuai jumlah Barang pada Permintaan apakah anda setuju?" />

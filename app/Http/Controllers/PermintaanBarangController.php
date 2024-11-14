@@ -39,7 +39,8 @@ class PermintaanBarangController extends Controller
         $validated = $request->validate([
             'barang_id' => 'required|max:255',
             'jml_barang_masuk' => 'required',
-            'total_harga_barang' => 'required'
+            'total_harga_barang' => 'required',
+            'user_id' => 'required'
         ]);
 
         $barang_masuk = BarangMasuk::create($validated);

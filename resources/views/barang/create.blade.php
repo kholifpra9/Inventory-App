@@ -29,7 +29,7 @@
                             <x-input-error class="mt-2" :messages="$errors->get('user_id')" />
                         </div>
                         <div class="max-w-xl">
-                            <x-input-label for="categorie" value="Kategori Buku" />
+                            <x-input-label for="categorie" value="Kategori" />
                             <x-select-input id="categorie" name="kategori_id" class="mt-1 block w-full" required>
                                 <option value="">Open this select menu</option>
                                 @foreach($kategoris as $key => $value)
